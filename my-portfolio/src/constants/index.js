@@ -102,7 +102,7 @@ const experiences = [
 
 const projects = [
     {
-        name: "Car Rent",
+        name: "Lecture Leave Apply System",
         description:
             "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
         tags: [
