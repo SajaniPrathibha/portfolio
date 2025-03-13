@@ -37,24 +37,27 @@ const ServiceCard = ({index,title,icon}) =>{
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
-        <motion.p variants={fadeIn("","",0.1,1)}
-        className='mt-5 text-gray-400 text-[17px] max-w-7xl leading-[20px]'>
-          I am a strong believer in positive thinking, teamwork, and effective leadership. I take pride in my ability 
+      <motion.div variants={textVariant()} className="w-full container mx-auto px-4 sm:px-6 md:px-10">
+        <p className={`${styles.sectionSubText} text-center sm:text-left`}>Introduction</p>
+        <h2 className={`${styles.sectionHeadText} text-center sm:text-left`}>Overview</h2>
+
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className="mt-5 text-gray-400 text-sm sm:text-base md:text-lg max-w-full sm:max-w-xl md:max-w-3xl lg:max-w-7xl leading-relaxed text-center sm:text-left mx-auto"
+        >
+          I am a strong believer in positive thinking, teamwork, and effective leadership. I take pride in my ability
           to lead and manage tasks efficiently, ensuring that every project I undertake is completed with responsibility and dedication.
-          My proactive approach allows me to adapt 
+          My proactive approach allows me to adapt
           to challenges, inspire my team, and maintain a solution-oriented mindset in any work environment.
-
-
         </motion.p>
-        <div className="mt-20 flex flex-wrap gap-10">
-          {services.map((service,index)=>(
-            <ServiceCard key={services.title} index={index} {...service}/>
+
+        <div className="mt-10 flex flex-col sm:flex-row flex-wrap justify-center gap-5 sm:gap-6">
+          {services.map((service, index) => (
+            <ServiceCard key={index} index={index} {...service} />
           ))}
         </div>
       </motion.div>
+
       <br/>
     </>
   )

@@ -60,12 +60,13 @@ const Works = () => {
 
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My works</p>
-        <h2 className={styles.sectionHeadText}>Projects</h2>
+      <motion.div variants={textVariant()} className="w-full container mx-auto px-4 sm:px-6 md:px-10">
+        <p className={`${styles.sectionSubText} text-center sm:text-left`}>My works</p>
+        <h2 className={`${styles.sectionHeadText} text-center sm:text-left`}>Projects</h2>
+
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-5 text-gray-400 text-[17px] max-w-7xl leading-[20px]"
+          className="mt-5 text-gray-400 text-sm sm:text-base md:text-lg max-w-full sm:max-w-2xl md:max-w-5xl lg:max-w-7xl leading-relaxed text-center sm:text-left mx-auto"
         >
           These projects showcase the skills and experience I have gained so far in full-stack development.
           Through working on various applications, I have strengthened my expertise in frontend and backend
@@ -73,11 +74,15 @@ const Works = () => {
         </motion.p>
       </motion.div>
 
-      <div className="mt-20 flex flex-wrap gap-15">
+
+      <div className="mt-20 flex flex-wrap gap-20 px-4 sm:px-6 md:px-10 justify-center sm:justify-start">
         {projects.map((project, index) => (
-          <ProjectCard key={index} index={index} project={project} onClick={setSelectedProject} />
+          <div key={index} className="w-[90%] sm:w-[360px] mx-auto sm:mx-0">
+            <ProjectCard index={index} project={project} onClick={setSelectedProject} />
+          </div>
         ))}
       </div>
+
 
       {/* Pop-up Modal */}
       {selectedProject && (

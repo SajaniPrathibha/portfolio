@@ -9,10 +9,11 @@ const Contact = () => {
     <div className="xl:mt-12 xl:flex-row flex-col flex gap-10 overflow-hidden">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+        className="w-full container mx-auto px-4 sm:px-6 md:px-10"
       >
-        <p className={styles.sectionSubText}>Let's keep in touch</p>
-        <h2 className={styles.sectionHeadText}>Contact</h2>
+        <p className={`${styles.sectionSubText} text-center sm:text-left`}>Let's keep in touch</p>
+        <h2 className={`${styles.sectionHeadText} text-center sm:text-left`}>Contact</h2>
+        <br/>
 
 
 
@@ -36,7 +37,7 @@ const Contact = () => {
             <h3 className="text-xl font-bold mb-2 transform translate-x-4">Certifications</h3>
             <div className="transform translate-x-8"> {/* Shift content right */}
               <ul className="list-disc space-y-1">
-                <li>CCNA: Introduction to Networks & AI</li>
+                <li>CCNA: Introduction to Networks</li>
                 <li>CISCO: Introduction to IoT</li>
                 <li>CISCO: IT Essentials</li>
                 <li>CCNA: Switching, Routing, and Wireless Essentials</li>
@@ -52,13 +53,13 @@ const Contact = () => {
               <p><span className="font-semibold">Mail:</span> sms.prathibha@gmail.com</p>
               <p>
                 <span className="font-semibold">Github:</span>
-                <a href="https://SajaniPrathha.github.com" className="text-blue-400 ml-1" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/SajaniPrathibha" className="text-blue-400 ml-1" target="_blank" rel="noopener noreferrer">
                   SajaniPrathha.github.com
                 </a>
               </p>
               <p>
                 <span className="font-semibold">LinkedIn:</span>
-                <a href="https://SajaniPrathha.linkedin.com" className="text-blue-400 ml-1" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/sajani-prathibha-b6b87a226/" className="text-blue-400 ml-1" target="_blank" rel="noopener noreferrer">
                   SajaniPrathha.linkedin.com
                 </a>
               </p>

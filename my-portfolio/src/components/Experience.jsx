@@ -49,10 +49,14 @@ const ExperienceCard = ({experience}) =>(
 const Experience = () => {
   return (
   <>
-      <motion.div variants={textVariant()} className="w-full flex flex-col items-start py-50">
-            <p className={styles.sectionSubText}>Experience</p>
-            <h2 className={styles.sectionHeadText}>Work Experience</h2>
+      <motion.div
+        variants={textVariant()}
+        className="w-full flex flex-col items-center sm:items-start px-4 sm:px-6 md:px-10 py-12 sm:py-16 md:py-20 max-w-7xl mx-auto"
+      >
+        <p className={`${styles.sectionSubText} text-center sm:text-left`}>Experience</p>
+        <h2 className={`${styles.sectionHeadText} text-center sm:text-left`}>Work Experience</h2>
       </motion.div>
+
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
