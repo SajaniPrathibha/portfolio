@@ -27,7 +27,7 @@ const ProjectCard = ({ index, project, onClick }) => {
             alt={project.name}
             className="w-full h-full object-cover rounded-2xl"
           />
-          {/* <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={(e) => {
                 e.stopPropagation();
@@ -37,7 +37,7 @@ const ProjectCard = ({ index, project, onClick }) => {
             >
               <img src={github} alt="git" className="w-1/2 h-1/2 object-contain" />
             </div>
-          </div> */}
+          </div>
           <div className="mt-10 bg-[#000033] p-3 rounded-b-2xl z-10 space-y-4 mb-10">
             <h3 className="text-white font-bold text-[24px] ">{project.name}</h3>
             

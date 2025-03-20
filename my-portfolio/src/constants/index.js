@@ -118,7 +118,7 @@ const projects = [
             },
         ],
         image: weatherApp,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/SajaniPrathibha",
     },
     {
         name: "Cosmatic App(ecom)",
@@ -139,7 +139,7 @@ const projects = [
             },
         ],
         image: ecom,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/SajaniPrathibha",
     },
     {
         name: "Huungry-Hub(food delivary)",
@@ -160,7 +160,7 @@ const projects = [
             },
         ],
         image: food,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/SajaniPrathibha",
     },
 ];
 
