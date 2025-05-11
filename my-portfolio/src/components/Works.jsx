@@ -88,7 +88,7 @@ const Works = () => {
       {selectedProject && (
         <div
           id="modal-overlay"
-          className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-60 backdrop-blur-md z-50"
+          className="fixed inset-0 flex justify-center  items-center bg-black bg-opacity-60 backdrop-blur-md z-50"
           onClick={handleClickOutside}
         >
           <motion.div
@@ -103,21 +103,30 @@ const Works = () => {
             >
               ✕
             </button>
-            <img
-              src={selectedProject.image}
-              alt={selectedProject.name}
-              className="w-full object-cover rounded-lg border border-red-500 mb-4"
-            />
-            <br/>
-            <h3 className="text-black font-bold items-center text-2xl border border-gray-500">{selectedProject.name}</h3>
-            <p className="text-gray-700 mt-2">{selectedProject.description}</p>
-            <div className="mt-10 flex flex-wrap gap-5">
-              {selectedProject.tags.map((tag) => (
-                <span key={tag.name} className={`text-sm ${tag.color}`}>
-                  #{tag.name}
-                </span>
-              ))}
+            <div className="p-6">
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.name}
+                className="w-full max-h-[300px] object-contain rounded-lg border "
+              />
+
+
+
+              <h3 className="text-black font-bold text-2xl mt-10 top-3">
+                {selectedProject.name}
+              </h3>
+
+              <p className="text-gray-700">{selectedProject.description}</p>
+
+              <div className="flex flex-wrap gap-3">
+                {selectedProject.tags.map((tag) => (
+                  <span key={tag.name} className={`text-sm ${tag.color}`}>
+                    #{tag.name}
+                  </span>
+                ))}
+              </div>
             </div>
+
           </motion.div>
         </div>
       )}
