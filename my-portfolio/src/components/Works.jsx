@@ -39,9 +39,7 @@ const ProjectCard = ({ index, project, onClick }) => {
             </div>
           </div>
           <div className="mt-10 bg-[#000033] p-3 rounded-b-2xl z-10 space-y-4 mb-10">
-            <h3 className="text-white font-bold text-[24px] ">{project.name}</h3>
-            
-            {/* <p>{project.description}</p> */}
+            <h3 className="text-white font-bold text-[24px] text-center">{project.name}</h3>
           </div>
         </div>
       </Tilt>
@@ -51,6 +49,7 @@ const ProjectCard = ({ index, project, onClick }) => {
 
 const Works = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [btnHover, setBtnHover] = useState(false);
 
   const handleClickOutside = (e) => {
     if (e.target.id === "modal-overlay") {
@@ -88,35 +87,43 @@ const Works = () => {
       {selectedProject && (
         <div
           id="modal-overlay"
-          className="fixed inset-0 flex justify-center  items-center bg-black bg-opacity-60 backdrop-blur-md z-50"
+          className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-60 backdrop-blur-md z-50"
           onClick={handleClickOutside}
         >
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
-            className="bg-white p-6 rounded-xl w-[80%] md:w-[50%] lg:w-[40%] relative"
+            className="bg-white w-[90%] max-w-[600px] rounded-xl overflow-y-auto max-h-[90vh] relative"
           >
             <button
-              className="absolute top-3 right-3 text-black text-xl"
+              onMouseEnter={() => setBtnHover(true)}
+              onMouseLeave={() => setBtnHover(false)}
+              style={{
+                backgroundColor: btnHover ? '#1aeeef' : 'transparent',
+                color: btnHover ? '#050e2d' : '#fff',
+                border: '1px solid #1aeeef',
+              }}
+              className="absolute top-3 right-3 text-black text-xl z-10 hover:bg-red hover:text-black"
               onClick={() => setSelectedProject(null)}
             >
               ✕
             </button>
-            <div className="p-6">
+
+            <div className="!p-6 flex flex-col space-y-4">
               <img
                 src={selectedProject.image}
                 alt={selectedProject.name}
-                className="w-full max-h-[300px] object-contain rounded-lg border "
+                className="w-full max-h-[300px] object-contain rounded-lg border"
               />
-
-
-
-              <h3 className="text-black font-bold text-2xl mt-10 top-3">
+              <div className="!mt-5 !ml-3">
+              <h3 className="text-black font-bold text-2xl">
                 {selectedProject.name}
               </h3>
 
-              <p className="text-gray-700">{selectedProject.description}</p>
+              <p className="text-gray-700">
+                {selectedProject.description}
+              </p>
 
               <div className="flex flex-wrap gap-3">
                 {selectedProject.tags.map((tag) => (
@@ -125,11 +132,12 @@ const Works = () => {
                   </span>
                 ))}
               </div>
+              </div>
             </div>
-
           </motion.div>
         </div>
       )}
+
     </>
   );
 };

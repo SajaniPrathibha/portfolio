@@ -12,6 +12,7 @@ import {
     ko, 
     weatherApp,
     ecom,
+    gCafe,
     food,
     threejs,
 } from "../assets";
@@ -142,7 +143,7 @@ const projects = [
         source_code_link: "https://github.com/SajaniPrathibha",
     },
     {
-        name: "Huungry-Hub(food delivary)",
+        name: "Hungry-Hub(food delivary)",
         description:
             "A web-based platform for the restaurant 'Hungry', allowing customers to order food online with secure payments, calorie tracking, order forecasting, and a loyalty program. Admins and staff manage orders, while ads are shown based on loyalty points",
         tags: [
@@ -160,6 +161,27 @@ const projects = [
             },
         ],
         image: food,
+        source_code_link: "https://github.com/SajaniPrathibha",
+    },
+    {
+        name: "Gaming-Cafe",
+        description:
+            "I developed a frontend web application for a gaming cafe that showcases the cafe’s information, highlights available games, and includes a tournament participation interface. Users can browse the list of games with detailed information about each title. The application also features a clean, responsive UI for logging in and signing up for tournaments.",
+        tags: [
+            {
+                name: "reactjs",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "threejs",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Tailwind CSS",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: gCafe,
         source_code_link: "https://github.com/SajaniPrathibha",
     },
 ];
