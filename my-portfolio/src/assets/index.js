@@ -21,7 +21,7 @@ import ko from "./company/ko.jpg";
 
 
 import weatherApp from "./weatherApp.jpg";
-import gCafe from "./gCafe.PNG";
+import gCafe from "./gCafe.png";
 import ecom from "./ecom.jpg";
 import food from "./food-del.jpg";
 
