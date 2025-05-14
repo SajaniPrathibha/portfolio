@@ -167,6 +167,7 @@ const projects = [
         name: "Gaming-Cafe",
         description:
             "I developed a frontend web application for a gaming cafe that showcases the cafe’s information, highlights available games, and includes a tournament participation interface. Users can browse the list of games with detailed information about each title. The application also features a clean, responsive UI for logging in and signing up for tournaments.",
+        Link:" https://gaming-cafe-site.netlify.app/",
         tags: [
             {
                 name: "reactjs",

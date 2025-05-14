@@ -121,9 +121,23 @@ const Works = () => {
                 {selectedProject.name}
               </h3>
 
-              <p className="text-gray-700">
+              <p className="text-gray-700 !mb-3">
                 {selectedProject.description}
               </p>
+                {selectedProject.Link && selectedProject.Link.trim() !== "" && (
+                  <p className="text-black">
+                    Project link:{" "}
+                    <a
+                      href={selectedProject.Link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 underline hover:text-blue-800"
+                    >
+                      {selectedProject.Link}
+                    </a>
+                  </p>
+                )}
+
 
               <div className="flex flex-wrap gap-3">
                 {selectedProject.tags.map((tag) => (
