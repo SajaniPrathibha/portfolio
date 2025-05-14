@@ -100,11 +100,11 @@ const Works = () => {
               onMouseEnter={() => setBtnHover(true)}
               onMouseLeave={() => setBtnHover(false)}
               style={{
-                backgroundColor: btnHover ? '#1aeeef' : 'transparent',
-                color: btnHover ? '#050e2d' : '#fff',
-                border: '1px solid #1aeeef',
+                backgroundColor: btnHover ? '#FF0000' : 'transparent',
+                color: btnHover ? '#050e2d' : '#050e2d',
+                // border: '1px solid #FF0000',
               }}
-              className="absolute top-3 right-3 text-black text-xl z-10 hover:bg-red hover:text-black"
+              className="absolute top-1 right-2 !px-2 py-2 text-black text-xl z-10 hover:bg-red hover:text-black"
               onClick={() => setSelectedProject(null)}
             >
               ✕
